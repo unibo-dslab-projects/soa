@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Objects and Applications | UNIBO Summer School</title>
+  <meta name="description" content="University of Bologna Summer School on Smart Objects and Applications.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <script src="https://cdn.tailwindcss.com?v=3.4.4"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            unibo: {
+              red: '#BA0C2F',
+              hover: '#9A0926',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+  <header class="bg-unibo-red text-white sticky top-0 z-50 shadow-md">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
+      <a href="index.html" class="text-xl font-bold uppercase tracking-wide hover:text-gray-200 transition">SOA Summer School</a>
+      <nav class="flex items-center gap-6 font-medium">
+        <a href="#about" class="hover:text-gray-200 transition">About</a>
+        <a href="#courses" class="hover:text-gray-200 transition">Topics</a>
+        <div class="relative group">
+          <button class="flex items-center gap-1 hover:text-gray-200 transition">
+            Editions
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </button>
+          <div class="absolute right-0 mt-2 w-40 bg-white text-gray-800 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+            <a href="2026/index.html" class="block px-4 py-2 hover:bg-gray-100 rounded-t-md">2026</a>
+            <a href="2025/index.html" class="block px-4 py-2 hover:bg-gray-100 rounded-b-md">2025</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-6 py-16">
+    <section class="text-center py-16 animate-fade-in-up">
+      <h1 class="text-4xl md:text-6xl font-bold text-unibo-red mb-6 leading-tight">Smart Objects and Applications</h1>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-10">A Summer School by the University of Bologna. Enrich your knowledge and competence in smart, interconnected objects and their integration in modern applications.</p>
+      
+      <div class="flex flex-wrap justify-center gap-4">
+        <span class="inline-flex items-center gap-2 px-6 py-2 bg-white border border-unibo-red text-unibo-red rounded-full font-semibold shadow-sm">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          10 Days
+        </span>
+        <span class="inline-flex items-center gap-2 px-6 py-2 bg-white border border-unibo-red text-unibo-red rounded-full font-semibold shadow-sm">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"></path></svg>
+          English
+        </span>
+        <span class="inline-flex items-center gap-2 px-6 py-2 bg-white border border-unibo-red text-unibo-red rounded-full font-semibold shadow-sm">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+          6 CFU
+        </span>
+      </div>
+    </section>
+
+    <section id="about" class="mb-24">
+      <h2 class="text-3xl font-bold text-unibo-red text-center mb-8 relative after:content-[''] after:block after:w-16 after:h-1 after:bg-unibo-red after:mx-auto after:mt-4">About the Program</h2>
+      <div class="max-w-4xl mx-auto text-lg text-gray-600 text-center space-y-6">
+        <p>
+          Designed for Computer Science and Engineering graduate and undergraduate students, this Summer School bridges theoretical concepts with hands-on practical activities. You will dive deep into the elements at the basis of designing and developing applications based on Smart Objects.
+        </p>
+        <p>
+          The program is structured across comprehensive classroom lectures and interactive lab sessions, ensuring you gain both the conceptual understanding and the practical skills needed in today's rapidly evolving IoT landscape.
+        </p>
+      </div>
+    </section>
+
+    <section id="courses" class="mb-24">
+      <h2 class="text-3xl font-bold text-unibo-red text-center mb-4 relative after:content-[''] after:block after:w-16 after:h-1 after:bg-unibo-red after:mx-auto after:mt-4">Core Topics</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-white p-8 rounded-xl shadow-sm border-t-4 border-unibo-red hover:-translate-y-1 hover:shadow-md transition duration-300">
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Security of Smart Objects</h3>
+          <p class="text-gray-600">Explore vulnerabilities and defense mechanisms tailored for IoT ecosystems and interconnected devices.</p>
+        </div>
+        <div class="bg-white p-8 rounded-xl shadow-sm border-t-4 border-unibo-red hover:-translate-y-1 hover:shadow-md transition duration-300">
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Human-Smart Object Interaction</h3>
+          <p class="text-gray-600">Study the paradigms of usability and interaction design when humans interface with autonomous smart systems.</p>
+        </div>
+        <div class="bg-white p-8 rounded-xl shadow-sm border-t-4 border-unibo-red hover:-translate-y-1 hover:shadow-md transition duration-300">
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Perception and Control Systems</h3>
+          <p class="text-gray-600">Understand how objects perceive their environment through sensors and react via advanced control algorithms.</p>
+        </div>
+        <div class="bg-white p-8 rounded-xl shadow-sm border-t-4 border-unibo-red hover:-translate-y-1 hover:shadow-md transition duration-300">
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Smart Sensing</h3>
+          <p class="text-gray-600">Dive into the architecture and data processing techniques underlying modern smart sensor networks.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-white border-t border-gray-200 py-10 text-center text-gray-500">
+    <p>&copy; University of Bologna. Smart Objects and Applications Summer School.</p>
+  </footer>
+</body>
+</html>
