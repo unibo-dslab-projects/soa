@@ -64,7 +64,7 @@
         color: white !important;
       }
       .social {
-        background-color: #10b981 !important;
+        background-color: #1fb5b2 !important;
         border-color: #059669 !important;
         color: white !important;
       }
@@ -74,8 +74,8 @@
         color: white !important;
       }
       .lunch {
-        background-color: #64748b !important;
-        border-color: #475569 !important;
+        background-color: #018c21 !important;
+        border-color: rgb(3, 117, 35) !important;
         color: white !important;
       }
       .other {
@@ -114,9 +114,9 @@
       <div class="flex flex-wrap justify-center gap-4 bg-white p-4 rounded-xl border border-gray-200 shadow-sm w-fit mx-auto mb-10">
         <div class="flex items-center gap-2 text-sm font-medium"><div class="w-4 h-4 rounded" style="background-color: #3b82f6"></div>Lecture</div>
         <div class="flex items-center gap-2 text-sm font-medium"><div class="w-4 h-4 rounded" style="background-color: #f59e0b"></div>Project Work</div>
-        <div class="flex items-center gap-2 text-sm font-medium"><div class="w-4 h-4 rounded" style="background-color: #10b981"></div>Social Event</div>
+        <div class="flex items-center gap-2 text-sm font-medium"><div class="w-4 h-4 rounded" style="background-color: #1fb5b2"></div>Social Event</div>
         <div class="flex items-center gap-2 text-sm font-medium"><div class="w-4 h-4 rounded" style="background-color: #ef4444"></div>Trip</div>
-        <div class="flex items-center gap-2 text-sm font-medium"><div class="w-4 h-4 rounded" style="background-color: #64748b"></div>Lunch</div>
+        <div class="flex items-center gap-2 text-sm font-medium"><div class="w-4 h-4 rounded" style="background-color: #018c21"></div>Lunch</div>
         <div class="flex items-center gap-2 text-sm font-medium"><div class="w-4 h-4 rounded" style="background-color: #8b5cf6"></div>Other</div>
       </div>
 
@@ -130,6 +130,264 @@
     </footer>
 
     <script>
+      const events = [
+        // Sunday 5
+        {
+          title: "Arrival",
+          people: "Manuel Andruccioli, Kelvin Olaiya",
+          start: "2026-07-05T14:00:00",
+          end: "2026-07-05T18:00:00",
+          location: "Bologna Airport",
+          eventType: "other",
+          link: "https://maps.app.goo.gl/73YR7WpPTq6avFGMA"
+        },
+
+        // Monday 6
+        {
+          title: "Introduction",
+          people: "Silvia Mirri",
+          start: "2026-07-06T10:00:00",
+          end: "2026-07-06T12:00:00",
+          location: "Room 2.11",
+          eventType: "lecture",
+        },
+        {
+          title: "Lunch Break",
+          start: "2026-07-06T12:00:00",
+          end: "2026-07-06T14:00:00",
+          location: "",
+          eventType: "lunch",
+        },
+        {
+          title: "Project Work",
+          people: "Manuel Andruccioli, Kelvin Olaiya",
+          start: "2026-07-06T14:00:00",
+          end: "2026-07-06T17:00:00",
+          location: "RISE Lab",
+          eventType: "lab",
+        },
+
+        // Tuesday 7
+        {
+          title: "Perception and Control System",
+          people: "Giovanni Delnevo",
+          start: "2026-07-07T11:00:00",
+          end: "2026-07-07T13:00:00",
+          eventType: "lecture",
+          location: "Room 2.11",
+        },
+        {
+          title: "Lunch Break",
+          start: "2026-07-07T13:00:00",
+          end: "2026-07-07T14:00:00",
+          eventType: "lunch",
+        },
+        {
+          title: "Smart Sensing",
+          people: "Silvia Mirri",
+          start: "2026-07-07T14:00:00",
+          end: "2026-07-07T17:00:00",
+          location: "Lab 3.3",
+          eventType: "lecture",
+        },
+        {
+          title: "Welcome Party",
+          start: "2026-07-07T17:00:00",
+          end: "2026-07-07T19:00:00",
+          eventType: "social",
+          location: "Volume Bar",
+        },
+
+        // Wednesday 8
+        {
+          title: "Security of Smart Objects",
+          people: "Gabriele D'Angelo",
+          start: "2026-07-08T10:00:00",
+          end: "2026-07-08T12:00:00",
+          eventType: "lecture",
+          location: "Room 2.10",
+        },
+        {
+          title: "Lunch Break",
+          start: "2026-07-08T12:00:00",
+          end: "2026-07-08T14:00:00",
+          eventType: "lunch",
+        },
+        {
+          title: "Gamification",
+          people: "Catia Prandi",
+          start: "2026-07-08T14:00:00",
+          end: "2026-07-08T16:00:00",
+          eventType: "lecture",
+          location: "Room 2.10",
+        },
+
+        // Thursday 9
+        {
+          title: "Perception and Control System",
+          people: "Giovanni Delnevo",
+          start: "2026-07-09T10:00:00",
+          end: "2026-07-09T12:00:00",
+          eventType: "lecture",
+          location: "Room 2.10",
+        },
+        {
+          title: "Lunch Break",
+          start: "2026-07-09T12:00:00",
+          end: "2026-07-09T14:00:00",
+          eventType: "lunch",
+        },
+        {
+          title: "Data Visualization",
+          people: "Chiara Ceccarini",
+          start: "2026-07-09T14:00:00",
+          end: "2026-07-09T16:00:00",
+          eventType: "lecture",
+          location: "Lab 3.3",
+        },
+
+        // Friday 10
+        {
+          title: "Project Work",
+          people: "Manuel Andruccioli, Kelvin Olaiya",
+          start: "2026-07-10T10:00:00",
+          end: "2026-07-10T13:00:00",
+          eventType: "lab",
+          location: "RISE Lab",
+        },
+        {
+          title: "Lunch Break",
+          start: "2026-07-10T13:00:00",
+          end: "2026-07-10T14:00:00",
+          eventType: "lunch",
+        },
+        {
+          title: "Project Work",
+          people: "Manuel Andruccioli, Kelvin Olaiya",
+          start: "2026-07-10T14:00:00",
+          end: "2026-07-10T17:00:00",
+          eventType: "lab",
+          location: "RISE Lab",
+        },
+
+        // Saturday 11
+        {
+          title: "Ferrari Museum Visit",
+          people: "Manuel Andruccioli",
+          start: "2026-07-11T09:00:00",
+          end: "2026-07-11T18:00:00",
+          eventType: "trip",
+          location: "Maranello, Italy",
+          link: "https://www.ferrari.com/it-IT/museums/ferrari-maranello"
+        },
+
+        // Sunday 12
+        {
+          title: "Free Time / Trip",
+          start: "2026-07-12T09:00:00",
+          end: "2026-07-12T18:00:00",
+          eventType: "trip",
+          // location: "TBD",
+        },
+
+        // Monday 13
+        {
+          title: "Project Work",
+          people: "Manuel Andruccioli, Kelvin Olaiya",
+          start: "2026-07-13T10:00:00",
+          end: "2026-07-13T13:00:00",
+          eventType: "lab",
+          location: "RISE Lab",
+        },
+        {
+          title: "Lunch Break",
+          start: "2026-07-13T13:00:00",
+          end: "2026-07-13T14:00:00",
+          eventType: "lunch",
+        },
+        {
+          title: "Project Work",
+          people: "Manuel Andruccioli, Kelvin Olaiya",
+          start: "2026-07-13T14:00:00",
+          end: "2026-07-13T17:00:00",
+          eventType: "lab",
+          location: "RISE Lab",
+        },
+
+        // Tuesday 14
+        {
+          title: "Guglielmo Marconi Museum Visit (mandatory)",
+          start: "2026-07-14T09:00:00",
+          end: "2026-07-14T17:00:00",
+          eventType: "trip",
+          location: "Bologna, Italy",
+          link: "https://maps.app.goo.gl/m2xrmS2P17yDAraR9"
+        },
+
+        // Wednesday 15
+        {
+          title: "Project Work",
+          people: "Manuel Andruccioli, Kelvin Olaiya",
+          start: "2026-07-15T10:00:00",
+          end: "2026-07-15T13:00:00",
+          eventType: "lab",
+          location: "RISE Lab",
+        },
+        {
+          title: "Lunch Break",
+          start: "2026-07-15T13:00:00",
+          end: "2026-07-15T14:00:00",
+          eventType: "lunch",
+        },
+        {
+          title: "Project Work",
+          people: "Manuel Andruccioli, Kelvin Olaiya",
+          start: "2026-07-15T14:00:00",
+          end: "2026-07-15T17:00:00",
+          eventType: "lab",
+          location: "RISE Lab",
+        },
+
+        // Thursday 16
+        {
+          title: "Project Work",
+          people: "Manuel Andruccioli, Kelvin Olaiya",
+          start: "2026-07-16T10:00:00",
+          end: "2026-07-16T13:00:00",
+          eventType: "lab",
+          location: "RISE Lab",
+        },
+        {
+          title: "Lunch Break",
+          start: "2026-07-16T13:00:00",
+          end: "2026-07-16T14:00:00",
+          eventType: "lunch",
+        },
+        {
+          title: "Final Exam",
+          start: "2026-07-16T14:00:00",
+          end: "2026-07-16T17:00:00",
+          eventType: "other",
+          location: "RISE Lab",
+        },
+        {
+          title: "Farewell Dinner",
+          start: "2026-07-16T19:00:00",
+          end: "2026-07-16T21:00:00",
+          eventType: "social",
+          location: "TBD",
+        },
+
+        // Friday 17
+        {
+          title: "Departure",
+          start: "2026-07-17T09:00:00",
+          end: "2026-07-17T12:00:00",
+          eventType: "other",
+          location: "Bologna Airport",
+        },
+      ];
+
       document.addEventListener("DOMContentLoaded", function () {
         var calendarEl = document.getElementById("calendar");
 
@@ -146,239 +404,7 @@
           },
           contentHeight: "auto",
           allDaySlot: false,
-          events: [
-            // Sunday 5
-            {
-              title: "Arrival in Bologna & Transfer",
-              start: "2026-07-05T09:00:00",
-              end: "2026-07-05T12:00:00",
-              className: "other",
-            },
-
-            // Monday 6
-            {
-              title: "Intro (Mirri) - classroom 2.8",
-              start: "2026-07-06T10:00:00",
-              end: "2026-07-06T11:00:00",
-              className: "lecture",
-            },
-            {
-              title: "Smart Environments (Mirri) - classroom 2.8",
-              start: "2026-07-06T11:00:00",
-              end: "2026-07-06T13:00:00",
-              className: "lecture",
-            },
-            {
-              title: "Lunch",
-              start: "2026-07-06T13:00:00",
-              end: "2026-07-06T14:30:00",
-              className: "lunch",
-            },
-            {
-              title: "IoT Data Primer (Manzoni) - classroom 2.8",
-              start: "2026-07-06T14:30:00",
-              end: "2026-07-06T16:30:00",
-              className: "lecture",
-              url: "https://pmanzoni.notion.site/mqtt-demo-unibo",
-            },
-            {
-              title: "Welcome Party @Volume",
-              start: "2026-07-06T16:30:00",
-              end: "2026-07-06T18:00:00",
-              className: "social",
-            },
-
-            // Tuesday 7
-            {
-              title: "Smart Object Security (D'Angelo) - classroom 2.8",
-              start: "2026-07-07T10:00:00",
-              end: "2026-07-07T13:00:00",
-              className: "lecture",
-            },
-            {
-              title: "Lunch",
-              start: "2026-07-07T13:00:00",
-              end: "2026-07-07T14:00:00",
-              className: "lunch",
-            },
-            {
-              title: "Project Work - lab 3.1",
-              start: "2026-07-07T14:00:00",
-              end: "2026-07-07T17:00:00",
-              className: "project",
-            },
-
-            // Wednesday 8
-            {
-              title: "Project Work - classroom 2.8",
-              start: "2026-07-08T10:00:00",
-              end: "2026-07-08T13:00:00",
-              className: "project",
-            },
-            {
-              title: "Lunch",
-              start: "2026-07-08T13:00:00",
-              end: "2026-07-08T14:00:00",
-              className: "lunch",
-            },
-            {
-              title: "Data Prediction (Maniezzo) - classroom 2.8",
-              start: "2026-07-08T14:00:00",
-              end: "2026-07-08T17:00:00",
-              className: "lecture",
-            },
-
-            // Thursday 9
-            {
-              title: "ML & TinyML (Delnevo) - classroom 2.8",
-              start: "2026-07-09T10:00:00",
-              end: "2026-07-09T13:00:00",
-              className: "lecture",
-            },
-            {
-              title: "Lunch",
-              start: "2026-07-09T13:00:00",
-              end: "2026-07-09T14:00:00",
-              className: "lunch",
-            },
-            {
-              title: "Social IoT (Girau) - classroom 2.8",
-              start: "2026-07-09T14:00:00",
-              end: "2026-07-09T17:00:00",
-              className: "lecture",
-            },
-
-            // Friday 10
-            {
-              title: "Docker (Andruccioli, Olayia) - lab 3.3",
-              start: "2026-07-10T10:00:00",
-              end: "2026-07-10T13:00:00",
-              className: "lecture",
-            },
-            {
-              title: "Lunch",
-              start: "2026-07-10T13:00:00",
-              end: "2026-07-10T14:00:00",
-              className: "lunch",
-            },
-            {
-              title: "Project Work - lab 3.3",
-              start: "2026-07-10T14:00:00",
-              end: "2026-07-10T17:00:00",
-              className: "project",
-            },
-
-            // Saturday 11
-            {
-              title: "Trip to Ferrari Museum",
-              start: "2026-07-11T09:00:00",
-              end: "2026-07-11T18:00:00",
-              className: "trip",
-            },
-
-            // Sunday 12
-            {
-              title: "Trip / Free Time",
-              start: "2026-07-12T09:00:00",
-              end: "2026-07-12T18:00:00",
-              className: "trip",
-            },
-
-            // Monday 13
-            {
-              title: "Project Work - lab 3.3",
-              start: "2026-07-13T10:00:00",
-              end: "2026-07-13T13:00:00",
-              className: "project",
-            },
-            {
-              title: "Lunch",
-              start: "2026-07-13T13:00:00",
-              end: "2026-07-13T14:00:00",
-              className: "lunch",
-            },
-            {
-              title:
-                "Data Viz & Gamification (Prandi, Ceccarini) - classroom 2.4",
-              start: "2026-07-13T14:00:00",
-              end: "2026-07-13T17:00:00",
-              className: "lecture",
-            },
-
-            // Tuesday 14
-            {
-              title: "Villa Griffone Visit",
-              start: "2026-07-14T10:00:00",
-              end: "2026-07-14T13:00:00",
-              className: "trip",
-            },
-            {
-              title: "Lunch",
-              start: "2026-07-14T13:00:00",
-              end: "2026-07-14T14:00:00",
-              className: "lunch",
-            },
-            {
-              title: "Project Work - classroom 2.5",
-              start: "2026-07-14T14:00:00",
-              end: "2026-07-14T17:00:00",
-              className: "project",
-            },
-
-            // Wednesday 15
-            {
-              title: "Project Work - classroom 3.3",
-              start: "2026-07-15T10:00:00",
-              end: "2026-07-15T13:00:00",
-              className: "project",
-            },
-            {
-              title: "Lunch",
-              start: "2026-07-15T13:00:00",
-              end: "2026-07-15T14:00:00",
-              className: "lunch",
-            },
-            {
-              title: "Project Work - classroom 3.3",
-              start: "2026-07-15T14:00:00",
-              end: "2026-07-15T17:00:00",
-              className: "project",
-            },
-
-            // Thursday 16
-            {
-              title: "Project Work - classroom 2.5",
-              start: "2026-07-16T10:00:00",
-              end: "2026-07-16T13:00:00",
-              className: "project",
-            },
-            {
-              title: "Lunch",
-              start: "2026-07-16T13:00:00",
-              end: "2026-07-16T14:00:00",
-              className: "lunch",
-            },
-            {
-              title: "Final Exam",
-              start: "2026-07-16T14:00:00",
-              end: "2026-07-16T17:00:00",
-              className: "other",
-            },
-            {
-              title: "Farewell Dinner @Scottadito",
-              start: "2026-07-16T20:00:00",
-              end: "2026-07-16T22:30:00",
-              className: "social",
-            },
-
-            // Friday 17
-            {
-              title: "Departure to Bologna Airport",
-              start: "2026-07-17T09:00:00",
-              end: "2026-07-17T12:00:00",
-              className: "other",
-            },
-          ],
+          events: events,
           headerToolbar: {
             left: "timeGridDay,timeGridWeek,dayGridMonth",
             center: "title",
@@ -390,14 +416,45 @@
             timeGridWeek: "Week",
             dayGridMonth: "Month",
           },
+          eventClassNames: function (arg) {
+            let type = arg.event.extendedProps.eventType;
+            if (!type) return [];
+            if (type.toLowerCase().startsWith('lab')) return ['project'];
+            return [type];
+          },
+          eventContent: function (arg) {
+            let html = '<div class="h-full overflow-y-auto flex flex-col p-1">';
+            if (arg.timeText) {
+              html += `<div class="fc-event-time font-semibold text-xs mb-0.5">${arg.timeText}</div>`;
+            }
+            html += `<div class="fc-event-title font-bold text-sm leading-tight">${arg.event.title}</div>`;
+            
+            if (arg.event.extendedProps.people) {
+              html += `<div class="fc-event-people text-xs mt-1 opacity-90"><span class="font-semibold">Who:</span> ${arg.event.extendedProps.people}</div>`;
+            }
+            
+            if (arg.event.extendedProps.location) {
+              html += `<div class="fc-event-location text-xs mt-1 opacity-90"><span class="font-semibold">📍</span> ${arg.event.extendedProps.location}</div>`;
+            }
+            html += '</div>';
+            
+            return { html: html };
+          },
           eventDidMount: function (info) {
-            if (info.event.url) {
+            const link = info.event.extendedProps.link || info.event.url;
+            if (link) {
               const el = info.el.querySelector(".fc-event-title");
               if (el) {
                 el.style.textDecoration = "underline";
-                el.style.color = "#ffffff";
               }
-              info.el.setAttribute("target", "_blank");
+              info.el.style.cursor = "pointer";
+            }
+          },
+          eventClick: function (info) {
+            const link = info.event.extendedProps.link || info.event.url;
+            if (link) {
+              info.jsEvent.preventDefault();
+              window.open(link, "_blank");
             }
           },
         });
